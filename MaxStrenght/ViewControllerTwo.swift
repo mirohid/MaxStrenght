@@ -30,6 +30,8 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         setupPickerView()
+        setupTapGestures()  // Setup tap gestures for images
+        disableImageClicks()  // Initially make images unclickable
     }
     
     private func setupPickerView() {
@@ -46,6 +48,28 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
            toolbar.setItems([doneButton], animated: false)
            selectionTxtField.inputAccessoryView = toolbar
        }
+    
+    
+    // Disable interactions before selection
+      private func disableImageClicks() {
+          viewProgressBgImage.isUserInteractionEnabled = false
+          startTestBgImg.isUserInteractionEnabled = false
+      }
+
+      // Enable interactions after selection
+      private func enableImageClicks() {
+          viewProgressBgImage.isUserInteractionEnabled = true
+          startTestBgImg.isUserInteractionEnabled = true
+      }
+
+      // Setup Tap Gesture Recognizers
+      private func setupTapGestures() {
+          let startTestTapGesture = UITapGestureRecognizer(target: self, action: #selector(startTestTapped))
+          startTestBgImg.addGestureRecognizer(startTestTapGesture)
+
+          let viewProgressTapGesture = UITapGestureRecognizer(target: self, action: #selector(viewProgressTapped))
+          viewProgressBgImage.addGestureRecognizer(viewProgressTapGesture)
+      }
     
     
     // MARK: - UIPickerView DataSource
@@ -65,6 +89,8 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
            selectionTxtField.text = options[row]
            
+           enableImageClicks()
+          
            // Toggle the images when an option is selected
            viewProgressBgImage.image = UIImage(named: selectedViewProgressImage)
            startTestBgImg.image = UIImage(named: selectedStartTestImage)
@@ -78,4 +104,15 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - Navigate to ViewControllerThree when tapping on startTestBgImg
+     @objc func startTestTapped() {
+         let vc = storyboard?.instantiateViewController(withIdentifier: "ViewControllerFour") as! ViewControllerFour
+         self.navigationController?.pushViewController(vc, animated: true)
+     }
+
+     // Optional: If you want an action when tapping viewProgressBgImage
+     @objc func viewProgressTapped() {
+         print("View Progress Tapped!")
+     }
+ 
 }

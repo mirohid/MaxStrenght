@@ -9,15 +9,25 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var labelAttempt: UILabel!
+    @IBOutlet weak var txtKg: UITextField!
+    @IBOutlet weak var thumpsDown: UIImageView!
+    @IBOutlet weak var thumpsUp: UIImageView!
+    @IBOutlet weak var cancelBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+   
+    }
+ 
+    @IBAction func cancelBtnTapped(_ sender: UIButton) {
+        
     }
     
 }
