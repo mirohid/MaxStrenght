@@ -8,16 +8,19 @@
 import UIKit
 
 class ViewControllerFour: UIViewController {
-
     
     @IBOutlet weak var tableView: UITableView!
-   // var attempts: [String] = ["Attempt 1"]
     var attempts: [Bool?] = [nil]
+    
+    
+    @IBOutlet weak var endTest: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         self.navigationItem.hidesBackButton = true
+        endTestTapGestures()
         
         // Register TableViewCell
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cellone")
@@ -28,69 +31,26 @@ class ViewControllerFour: UIViewController {
         print("Back Button Tapped")
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    private func endTestTapGestures() {
+        let endTestTapGesture = UITapGestureRecognizer(target: self, action: #selector(endTestTapped))
+        endTest.isUserInteractionEnabled = true 
+        endTest.addGestureRecognizer(endTestTapGesture)
+    }
+    
+    @objc func endTestTapped() {
+        print("btn tapped")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "EndTestViewController") as! EndTestViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
-
-//extension ViewControllerFour: UITableViewDataSource, UITableViewDelegate {
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return attempts.count  // Number of rows in table view
-//    }
-//    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        80
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellone", for: indexPath) as? TableViewCell else {
-//            return UITableViewCell()
-//        }
-//        
-//        cell.labelAttempt.text = attempts[indexPath.row]
-//        cell.txtKg.placeholder = "00"
-//        
-//        // Reset images for new cells
-//        cell.thumpsUp.image = UIImage(named: "thumpsUp")
-//        cell.thumpsDown.image = UIImage(named: "thumpsDown")
-//        
-//        // Ensure only one selection per row
-//        cell.thumbsUpSelected = false
-//        cell.thumbsDownSelected = false
-//        
-//        // Pass reference of `ViewControllerFour` to the cell
-//        cell.delegate = self
-//        cell.indexPath = indexPath  // Keep track of row index
-//        
-//        return cell
-//    }
-//}
-//
-//
-//// MARK: - Cell Delegate to Handle Selections
-//extension ViewControllerFour: TableViewCellDelegate {
-//    
-//    func didSelectThumbsUp(at indexPath: IndexPath) {
-//        guard indexPath.row == attempts.count - 1, attempts.count < 5 else { return }
-//
-//        // Add a new row only if it's the last row and max 5 rows
-//        attempts.append("Attempt \(attempts.count + 1)")
-//        tableView.reloadData()
-//    }
-//
-//    func didSelectThumbsDown(at indexPath: IndexPath) {
-//        guard indexPath.row == attempts.count - 1, attempts.count < 5 else { return }
-//
-//        // Add a new row only if it's the last row and max 5 rows
-//        attempts.append("Attempt \(attempts.count + 1)")
-//        tableView.reloadData()
-//    }
-//}
 
 extension ViewControllerFour: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return attempts.count
-        
-    
         
     }
     
@@ -112,8 +72,6 @@ extension ViewControllerFour: UITableViewDataSource, UITableViewDelegate {
         } else {
             cell.resetSelection()
         }
-
-        // Pass reference of `ViewControllerFour` to the cell
         cell.delegate = self
         cell.indexPath = indexPath
 
@@ -121,11 +79,8 @@ extension ViewControllerFour: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-// MARK: - Cell Delegate to Handle Selections
 extension ViewControllerFour: TableViewCellDelegate {
 
-    
-    
     func didSelectThumbs(at indexPath: IndexPath, isThumbsUp: Bool) {
         // Update selection state for that row
         attempts[indexPath.row] = isThumbsUp

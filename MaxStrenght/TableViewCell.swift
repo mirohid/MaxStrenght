@@ -7,12 +7,6 @@
 
 import UIKit
 
-
-//protocol TableViewCellDelegate: AnyObject {
-//    func didSelectThumbsUp(at indexPath: IndexPath)
-//    func didSelectThumbsDown(at indexPath: IndexPath)
-//}
-
 protocol TableViewCellDelegate: AnyObject {
     func didSelectThumbs(at indexPath: IndexPath, isThumbsUp: Bool)
 }
