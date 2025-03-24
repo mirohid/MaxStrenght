@@ -27,33 +27,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAm-55-ohZ">
-                                <rect key="frame" x="113" y="27" width="17.666666666666657" height="18.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAm-55-ohZ">
+                                <rect key="frame" x="107" y="20.000000000000004" width="36" height="35.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kgs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb8-bD-YBp">
-                                <rect key="frame" x="134.66666666666666" y="30" width="22" height="15"/>
+                                <rect key="frame" x="147" y="30" width="22" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumpsDown" translatesAutoresizingMaskIntoConstraints="NO" id="vdc-3K-TAi">
-                                <rect key="frame" x="192.66666666666666" y="21" width="58" height="32"/>
+                                <rect key="frame" x="205" y="21" width="58" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="brj-aU-AWK"/>
                                     <constraint firstAttribute="height" constant="32" id="kt0-q0-2If"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumpsUp" translatesAutoresizingMaskIntoConstraints="NO" id="aSN-NW-aJe">
-                                <rect key="frame" x="256.66666666666669" y="21" width="58" height="32"/>
+                                <rect key="frame" x="269" y="21" width="58" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="IbB-Gu-Uyv"/>
                                     <constraint firstAttribute="width" constant="58" id="Ufz-IH-Mom"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6A-Lo-ad9">
-                                <rect key="frame" x="332.66666666666669" y="22" width="36" height="30"/>
+                                <rect key="frame" x="345" y="22" width="36" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="X"/>
                                 <connections>
@@ -71,9 +71,9 @@
                             <constraint firstItem="aSN-NW-aJe" firstAttribute="top" secondItem="KdB-bu-AX7" secondAttribute="top" constant="21" id="SyY-ew-29a"/>
                             <constraint firstItem="p6A-Lo-ad9" firstAttribute="leading" secondItem="aSN-NW-aJe" secondAttribute="trailing" constant="18" id="Tmf-qM-vt1"/>
                             <constraint firstItem="IFA-Xo-vmb" firstAttribute="leading" secondItem="KdB-bu-AX7" secondAttribute="leading" constant="16" id="XMP-Ae-Ql2"/>
-                            <constraint firstItem="rAm-55-ohZ" firstAttribute="leading" secondItem="IFA-Xo-vmb" secondAttribute="trailing" constant="41" id="YZb-2R-hnB"/>
+                            <constraint firstItem="rAm-55-ohZ" firstAttribute="leading" secondItem="IFA-Xo-vmb" secondAttribute="trailing" constant="35" id="YZb-2R-hnB"/>
                             <constraint firstItem="mb8-bD-YBp" firstAttribute="top" secondItem="KdB-bu-AX7" secondAttribute="top" constant="30" id="YqY-yB-lmP"/>
-                            <constraint firstItem="rAm-55-ohZ" firstAttribute="top" secondItem="KdB-bu-AX7" secondAttribute="top" constant="27" id="eEQ-cg-Zd2"/>
+                            <constraint firstItem="rAm-55-ohZ" firstAttribute="top" secondItem="KdB-bu-AX7" secondAttribute="top" constant="20" id="eEQ-cg-Zd2"/>
                             <constraint firstItem="mb8-bD-YBp" firstAttribute="leading" secondItem="rAm-55-ohZ" secondAttribute="trailing" constant="4" id="tR2-ok-78B"/>
                         </constraints>
                     </view>
