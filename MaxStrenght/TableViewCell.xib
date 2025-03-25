@@ -27,7 +27,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAm-55-ohZ">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00" textAlignment="center" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="rAm-55-ohZ">
                                 <rect key="frame" x="107" y="20.000000000000004" width="36" height="35.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -93,7 +93,7 @@
                 <outlet property="thumpsUp" destination="aSN-NW-aJe" id="7ic-T4-wum"/>
                 <outlet property="txtKg" destination="rAm-55-ohZ" id="coT-fw-Dja"/>
             </connections>
-            <point key="canvasLocation" x="184" y="64"/>
+            <point key="canvasLocation" x="279" y="77"/>
         </tableViewCell>
     </objects>
     <resources>
