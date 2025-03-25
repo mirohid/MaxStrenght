@@ -201,12 +201,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4w-ew-fE7">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Select Exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4w-ew-fE7">
                                         <rect key="frame" x="18" y="51.666666666666657" width="334" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="fMd-88-lR0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBn-fg-Sh9">
@@ -622,11 +622,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendarImg" translatesAutoresizingMaskIntoConstraints="NO" id="84u-iD-viD">
+                                        <rect key="frame" x="372" y="113" width="14" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="BpS-45-I7p"/>
+                                            <constraint firstAttribute="height" constant="16" id="wJX-jh-Q3A"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="84u-iD-viD" secondAttribute="bottom" constant="72" id="8Ra-QC-SlA"/>
                                     <constraint firstItem="3NC-kS-Xa2" firstAttribute="leading" secondItem="ycE-JU-MQz" secondAttribute="leading" constant="16" id="FMB-2b-b3g"/>
                                     <constraint firstItem="wtm-Wf-465" firstAttribute="leading" secondItem="ycE-JU-MQz" secondAttribute="leading" constant="17" id="LV1-WT-GG7"/>
+                                    <constraint firstAttribute="trailing" secondItem="84u-iD-viD" secondAttribute="trailing" constant="16" id="a50-vY-evk"/>
                                     <constraint firstItem="3NC-kS-Xa2" firstAttribute="top" secondItem="0gA-Hg-EOg" secondAttribute="bottom" constant="5" id="cA8-fd-lht"/>
                                     <constraint firstItem="wtm-Wf-465" firstAttribute="top" secondItem="ycE-JU-MQz" secondAttribute="top" constant="70" id="rjJ-V7-GDZ"/>
                                     <constraint firstItem="0gA-Hg-EOg" firstAttribute="top" secondItem="wtm-Wf-465" secondAttribute="bottom" constant="20" id="tUY-ho-zgl"/>
@@ -718,7 +727,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehr-VT-4GQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3082" y="-62"/>
+            <point key="canvasLocation" x="3080.5970149253731" y="-62.471395881006863"/>
         </scene>
         <!--End Test View Controller-->
         <scene sceneID="3Y8-yP-9ao">
@@ -760,14 +769,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.64999997615814209" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendarImg" translatesAutoresizingMaskIntoConstraints="NO" id="PYa-pK-hq8">
+                                        <rect key="frame" x="372" y="113" width="14" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="205-Rp-sqn"/>
+                                            <constraint firstAttribute="height" constant="16" id="JYu-VM-Sqm"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="UH2-Oj-310" firstAttribute="leading" secondItem="Pfs-Ss-yZ8" secondAttribute="leading" constant="17" id="CWi-T2-j49"/>
+                                    <constraint firstAttribute="bottom" secondItem="PYa-pK-hq8" secondAttribute="bottom" constant="72" id="Mz9-NA-T7t"/>
                                     <constraint firstItem="cvu-Uv-AYF" firstAttribute="top" secondItem="UH2-Oj-310" secondAttribute="bottom" constant="20" id="RVZ-fR-EFC"/>
                                     <constraint firstItem="cvu-Uv-AYF" firstAttribute="leading" secondItem="Pfs-Ss-yZ8" secondAttribute="leading" constant="16" id="iJc-xR-3pd"/>
                                     <constraint firstItem="i5B-Mq-6lq" firstAttribute="leading" secondItem="Pfs-Ss-yZ8" secondAttribute="leading" constant="16" id="rK0-Vu-XEY"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="201" id="ucR-1T-o9u"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYa-pK-hq8" secondAttribute="trailing" constant="16" id="wtS-t2-Zty"/>
                                     <constraint firstItem="i5B-Mq-6lq" firstAttribute="top" secondItem="cvu-Uv-AYF" secondAttribute="bottom" constant="5" id="xzr-1h-lLR"/>
                                     <constraint firstAttribute="height" constant="201" id="zjB-Zv-W5q"/>
                                     <constraint firstItem="UH2-Oj-310" firstAttribute="top" secondItem="Pfs-Ss-yZ8" secondAttribute="top" constant="70" id="zjv-M1-Gen"/>
@@ -821,10 +839,18 @@
                                                             <constraint firstAttribute="width" constant="12" id="ziD-uc-pIT"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vectorLines" translatesAutoresizingMaskIntoConstraints="NO" id="f3t-5V-IFo">
+                                                        <rect key="frame" x="233" y="45" width="137" height="85"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="137" id="l8q-He-7lI"/>
+                                                            <constraint firstAttribute="height" constant="85" id="zwK-qz-bYd"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Ahi-ME-Rei" firstAttribute="top" secondItem="Rns-hv-yd9" secondAttribute="bottom" constant="1" id="2zs-ne-rBm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f3t-5V-IFo" secondAttribute="bottom" id="5Wr-Ea-CPV"/>
                                                     <constraint firstItem="Rns-hv-yd9" firstAttribute="top" secondItem="TUX-mM-U4D" secondAttribute="top" constant="28" id="LPu-Qv-CKL"/>
                                                     <constraint firstItem="C6o-v7-eU9" firstAttribute="leading" secondItem="mjF-sA-RcW" secondAttribute="trailing" constant="4" id="X8G-ny-to7"/>
                                                     <constraint firstItem="bGb-Ud-dhy" firstAttribute="top" secondItem="Ahi-ME-Rei" secondAttribute="bottom" constant="14" id="Z58-AZ-yEL"/>
@@ -835,6 +861,7 @@
                                                     <constraint firstItem="Rns-hv-yd9" firstAttribute="leading" secondItem="TUX-mM-U4D" secondAttribute="leading" constant="18" id="rCC-DI-t5o"/>
                                                     <constraint firstAttribute="height" constant="130" id="sgd-so-VxL"/>
                                                     <constraint firstItem="mjF-sA-RcW" firstAttribute="leading" secondItem="TUX-mM-U4D" secondAttribute="leading" constant="30" id="xz5-UF-xQn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f3t-5V-IFo" secondAttribute="trailing" id="yJr-Mj-9dv"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -874,7 +901,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0K-aC-pjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3889.5522388059699" y="-62.471395881006863"/>
+            <point key="canvasLocation" x="3732.8358208955224" y="-62.471395881006863"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gLo-jy-635">
@@ -902,11 +929,13 @@
         <image name="ViewInsightsBg" width="97" height="24"/>
         <image name="arrow" width="10" height="10"/>
         <image name="back" width="10" height="16"/>
+        <image name="calendarImg" width="14" height="16"/>
         <image name="downArrow" width="10" height="6"/>
         <image name="dumble" width="130" height="130"/>
         <image name="framelessBg" width="150" height="42"/>
         <image name="grayBg" width="150" height="42"/>
         <image name="newBtn" width="299" height="42"/>
+        <image name="vectorLines" width="139" height="86"/>
         <image name="viewColor" width="150" height="42"/>
         <image name="viewColor2" width="150" height="42"/>
         <systemColor name="systemBackgroundColor">
