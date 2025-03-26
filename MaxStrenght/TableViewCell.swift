@@ -10,9 +10,9 @@ import UIKit
 protocol TableViewCellDelegate: AnyObject {
     func didSelectThumbs(at indexPath: IndexPath, isThumbsUp: Bool)
 }
+
 class TableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var labelAttempt: UILabel!
     @IBOutlet weak var txtKg: UITextField!
     @IBOutlet weak var thumpsDown: UIImageView!
@@ -46,7 +46,6 @@ class TableViewCell: UITableViewCell {
  
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
         print("Cancel Button Tapped")
-        
     }
     
     @objc func thumbsUpTapped() {
