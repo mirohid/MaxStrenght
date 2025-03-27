@@ -9,7 +9,6 @@ import UIKit
 
 class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-
     @IBOutlet weak var selectionTxtField: UITextField!
     @IBOutlet weak var viewProgressBgImage: UIImageView!
     @IBOutlet weak var startTestBgImg: UIImageView!
@@ -17,11 +16,9 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     let pickerView = UIPickerView()
     let options = ["Option 1", "Option 2", "Option 3", "Option 4"]
-    
     // Default images (before selection)
     let defaultViewProgressImage = "framelessBg"
     let defaultStartTestImage = "grayBg"
-    
     // Images after selection
     let selectedViewProgressImage = "viewColor"
     let selectedStartTestImage = "viewColor2"
@@ -72,7 +69,7 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
       }
     
     
-    // MARK: - UIPickerView DataSource
+    // UIPickerView DataSource
        func numberOfComponents(in pickerView: UIPickerView) -> Int {
            return 1
        }
@@ -81,7 +78,7 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
            return options.count
        }
 
-       // MARK: - UIPickerView Delegate
+       // UIPickerView Delegate
        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
            return options[row]
        }
@@ -104,7 +101,7 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.navigationController?.popViewController(animated: true)
     }
     
-    // MARK: - Navigate to ViewControllerThree when tapping on startTestBgImg
+    //Navigate to ViewControllerThree when tapping on startTestBgImg
      @objc func startTestTapped() {
          let vc = storyboard?.instantiateViewController(withIdentifier: "ViewControllerFour") as! ViewControllerFour
          self.navigationController?.pushViewController(vc, animated: true)
